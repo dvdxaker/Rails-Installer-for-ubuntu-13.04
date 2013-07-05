@@ -92,3 +92,8 @@ echo -n "Start list of ruby installed:"
 rvm list
 echo "End list of ruby version"
 
+echo "#######################################"
+echo "########## Completed install ##########"
+echo "#######################################"
+
+echo "All warning and error see the log file: $LOG_FILE"
