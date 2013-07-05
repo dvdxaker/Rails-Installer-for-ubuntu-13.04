@@ -29,7 +29,7 @@ echo "Done"
 
 # Install Ruby Version Manager
 echo -n "Installing RVM..."
-sudo curl -L https://get.rvm.io | bash -s stable --ruby
+sudo curl -L https://get.rvm.io | bash -s stable --ruby >>$LOG_FILE
 echo "Done"
 
 # Loading Ruby Version Manager
@@ -49,7 +49,7 @@ echo "Done"
 
 # Install nodejs
 echo -n "Install nodejs"
-sudo apt-get -y install nodejs
+sudo apt-get -y install nodejs >>$LOG_FILE
 echo "Done"
 
 # Install Ruby 1.9.3
@@ -58,11 +58,11 @@ rvm install $RUBY19_VERSION >>$LOG_FILE
 echo "Done"
 
 # Set default ruby version($RUBY19_VERSION)
-rvm use $RUBY19_VERSION
+rvm use $RUBY19_VERSION >>$LOG_FILE
 
 # Install gemset for Ruby 1.9.3
 echo -n "Install gemset for Ruby v$RUBY19_VERSION"
-rvm gemset create gemset_ruby19
+rvm gemset create gemset_ruby19 >>$LOG_FILE
 echo "Done"
 
 # Install Ruby 1.9.3
@@ -71,10 +71,10 @@ rvm install $RUBY20_VERSION >>$LOG_FILE
 echo "Done"
 
 # Set default ruby version($RUBY19_VERSION)
-rvm use $RUBY20_VERSION
+rvm use $RUBY20_VERSION >>$LOG_FILE
 
 # Install gemset for Ruby 2.0.0
 echo -n "Install gemset for Ruby v$RUBY20_VERSION"
-rvm gemset create gemset_ruby20
+rvm gemset create gemset_ruby20 >>$LOG_FILE
 echo "Done"
 
