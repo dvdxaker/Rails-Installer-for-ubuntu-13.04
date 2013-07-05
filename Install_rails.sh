@@ -61,7 +61,7 @@ rvm install $RUBY19_VERSION >>$LOG_FILE
 echo "Done"
 
 # Set default ruby version($RUBY19_VERSION)
-rvm use $RUBY19_VERSION >>$LOG_FILE
+rvm use $RUBY19_VERSION --default >>$LOG_FILE
 
 # Install gemset for Ruby 1.9.3
 echo -n "Install gemset for Ruby v$RUBY19_VERSION"
@@ -79,7 +79,7 @@ rvm install $RUBY20_VERSION >>$LOG_FILE
 echo "Done"
 
 # Set default ruby version($RUBY19_VERSION)
-rvm use $RUBY20_VERSION >>$LOG_FILE
+rvm use $RUBY20_VERSION --default >>$LOG_FILE
 
 # Install gemset for Ruby 2.0.0
 echo -n "Install gemset for Ruby v$RUBY20_VERSION"
