@@ -65,7 +65,12 @@ echo -n "Install gemset for Ruby v$RUBY19_VERSION"
 rvm gemset create gemset_ruby19 >>$LOG_FILE
 echo "Done"
 
-# Install Ruby 1.9.3
+# Install latest rails (v.3.2.13)
+echo -n "Installing Rails(v.3.2.13) gem..."
+gem install rails -v 3.2.13 >>$LOG_FILE
+echo "Done"
+
+# Install Ruby 2.0.0
 echo -n "Installing Ruby (v$RUBY_VERSION)..."
 rvm install $RUBY20_VERSION >>$LOG_FILE
 echo "Done"
@@ -77,4 +82,13 @@ rvm use $RUBY20_VERSION >>$LOG_FILE
 echo -n "Install gemset for Ruby v$RUBY20_VERSION"
 rvm gemset create gemset_ruby20 >>$LOG_FILE
 echo "Done"
+# Install latests rails(v4+)
+echo -n "Installing Rails(v.4+) gem..."
+gem install rails >>$LOG_FILE
+echo "Done"
+
+# See all ruby version
+echo -n "Start list of ruby installed:"
+rvm list
+echo "End list of ruby version"
 
