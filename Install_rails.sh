@@ -3,6 +3,10 @@
 # Author: DVD_Xaker (ruscreative@ya.ru)
 # License: MIT
 
+# fixed error for install rdoc!!!
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 RUBY19_VERSION="1.9.3"
 RUBY20_VERSION="2.0.0"
 LOG_FILE="$HOME/rails_install.log"
