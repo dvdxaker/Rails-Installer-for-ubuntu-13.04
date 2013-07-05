@@ -17,7 +17,7 @@ echo "Done"
 
 # Upgrade OS Ubuntu 13.04
 echo -n "Upgrading package cache..."
-sudo apt-get  -t upgrade >>$LOG_FILE
+sudo apt-get -y upgrade >>$LOG_FILE
 echo "Done"
 
 # Install git
