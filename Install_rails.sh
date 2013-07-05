@@ -78,8 +78,6 @@ echo -n "Installing Rails(v.3.2.13) gem..."
 gem install rails -v 3.2.13 >>$LOG_FILE
 echo "Done"
 
-
-
 # Set default ruby version($RUBY19_VERSION)
 rvm use $RUBY20_VERSION --default >>$LOG_FILE
 
