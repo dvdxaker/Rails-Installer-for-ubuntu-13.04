@@ -41,30 +41,35 @@ source ~/.rvm/scripts/rvm >>$LOG_FILE
 echo "Done"
 
 # Check requirements RVM
-echo -n "RVM check requirements"
+echo -n "RVM check requirements..."
 rvm requirements >>$LOG_FILE
 echo "Done"
 
 # Install Additional Dependencies
-echo -n "Install additional dependencies"
+echo -n "Install additional dependencies..."
 sudo apt-get -y install build-essential openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion >>$LOG_FILE
 echo "Done"
 
 # Install nodejs
-echo -n "Install nodejs"
+echo -n "Install nodejs..."
 sudo apt-get -y install nodejs >>$LOG_FILE
 echo "Done"
 
 # Install Ruby 1.9.3
-echo -n "Installing Ruby (v$RUBY19_VERSION)..."
+echo -n "Installing Ruby ($RUBY19_VERSION)..."
 rvm install $RUBY19_VERSION >>$LOG_FILE
+echo "Done"
+
+# Install Ruby 2.0.0
+echo -n "Installing Ruby ($RUBY20_VERSION)..."
+rvm install $RUBY20_VERSION >>$LOG_FILE
 echo "Done"
 
 # Set default ruby version($RUBY19_VERSION)
 rvm use $RUBY19_VERSION --default >>$LOG_FILE
 
 # Install gemset for Ruby 1.9.3
-echo -n "Install gemset for Ruby v$RUBY19_VERSION"
+echo -n "Install gemset for Ruby v.$RUBY19_VERSION..."
 rvm gemset create gemset_ruby19 >>$LOG_FILE
 echo "Done"
 
@@ -73,10 +78,7 @@ echo -n "Installing Rails(v.3.2.13) gem..."
 gem install rails -v 3.2.13 >>$LOG_FILE
 echo "Done"
 
-# Install Ruby 2.0.0
-echo -n "Installing Ruby (v$RUBY_VERSION)..."
-rvm install $RUBY20_VERSION >>$LOG_FILE
-echo "Done"
+
 
 # Set default ruby version($RUBY19_VERSION)
 rvm use $RUBY20_VERSION --default >>$LOG_FILE
