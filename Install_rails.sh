@@ -26,3 +26,11 @@ echo -n "Installing Curl..."
 sudo apt-get -y install curl >>$LOG_FILE
 echo "Done"
 
+# Install Ruby Version Manager
+echo -n "Installing RVM..."
+sudo curl -L https://get.rvm.io | bash -s stable --ruby
+echo "Done"
+# Loading Ruby Version Manager
+echo -n "Loading RVM..."
+source ~/.rvm/scripts/rvm >>$LOG_FILE
+echo "Done.."
