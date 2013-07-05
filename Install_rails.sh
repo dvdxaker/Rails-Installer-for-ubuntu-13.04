@@ -14,15 +14,18 @@ echo "#######################################"
 echo -n "Updating package cache..."
 sudo apt-get update >>$LOG_FILE
 echo "Done"
+
 # Upgrade OS Ubuntu 13.04
 echo -n "Upgrading package cache..."
 sudo apt-get  -t upgrade >>$LOG_FILE
 echo "Done"
 
+# Install git
 echo -n "Installing git..."
 sudo apt-get -y install git >>$LOG_FILE
 echo "Done"
 
+# Install CURL
 echo -n "Installing Curl..."
 sudo apt-get -y install curl >>$LOG_FILE
 echo "Done"
@@ -82,6 +85,7 @@ rvm use $RUBY20_VERSION >>$LOG_FILE
 echo -n "Install gemset for Ruby v$RUBY20_VERSION"
 rvm gemset create gemset_ruby20 >>$LOG_FILE
 echo "Done"
+
 # Install latests rails(v4+)
 echo -n "Installing Rails(v.4+) gem..."
 gem install rails >>$LOG_FILE
@@ -92,8 +96,10 @@ echo -n "Start list of ruby installed:"
 rvm list
 echo "End list of ruby version"
 
+# See message about completed install
 echo "#######################################"
 echo "########## Completed install ##########"
 echo "#######################################"
 
+# See message about log file
 echo "All warning and error see the log file: $LOG_FILE"
