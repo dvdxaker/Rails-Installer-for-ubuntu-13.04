@@ -15,5 +15,14 @@ sudo apt-get update >>$LOG_FILE
 echo "Done"
 # Upgrade OS Ubuntu 13.04
 echo -n "Upgrading package cache..."
-sudo apt-get upgrade >>$LOG_FILE
+sudo apt-get  -t upgrade >>$LOG_FILE
 echo "Done"
+
+echo -n "Installing git..."
+sudo apt-get -y install git >>$LOG_FILE
+echo "Done..."
+
+echo -n "Installing Curl..."
+sudo apt-get -y install curl >>$LOG_FILE
+echo "Done"
+
