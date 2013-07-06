@@ -15,3 +15,7 @@ Command for terminal(Linux):
 2) chmod a+x Install_rails.sh
 
 3) ./Install_rails.sh
+
+Testing script:
+1) All work after install
+2) Have any error in console(Not found error in log file) <= maybe warning
