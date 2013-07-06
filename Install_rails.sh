@@ -3,7 +3,7 @@
 # Author: DVD_Xaker (ruscreative@ya.ru)
 # License: MIT
 
-# fixed error for install rdoc!!!
+# fixed error for install rdoc!!!(not work)
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 
